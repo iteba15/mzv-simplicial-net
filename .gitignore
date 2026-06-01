@@ -1,0 +1,16 @@
+runs/*.json
+runs/*.txt
+runs/*.tmp
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+output/
+*.egg-info/
+dist/
+.env
+*.log
+hit_registry.json
+hit_registry.tmp
+hit_registry.lock
+zeta_hunter_sheaf_*.pt
+checkpoints/
