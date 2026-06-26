@@ -52,6 +52,21 @@ notebooks/
 
 ---
 
+## Notebooks
+
+The three top-level notebooks are exploratory discovery runs; the three under `notebooks/` are the staged pipeline (sweep, then PSLQ, then report).
+
+| Notebook | What it does | Open in Colab |
+|----------|--------------|---------------|
+| `deep_discovery_zeta3.ipynb` | Expanded zeta(3) search over 60+ constants (polylogarithms, MZVs, Clausen, Dirichlet beta) with genetic, PySR, and exhaustive PSLQ methods. | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iteba15/mzv-simplicial-net/blob/main/deep_discovery_zeta3.ipynb) |
+| `mathematical_discovery_BEAST_MODE.ipynb` | Full-scale local-GPU discovery run: larger models, 100+ training identities, extended PySR and exhaustive PSLQ search. | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iteba15/mzv-simplicial-net/blob/main/mathematical_discovery_BEAST_MODE.ipynb) |
+| `zeta3_discovery_v2_colab.ipynb` | v2 discovery system with simplicial message passing, contrastive learning, grammar-guided search, and anti-memorisation training. | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iteba15/mzv-simplicial-net/blob/main/zeta3_discovery_v2_colab.ipynb) |
+| `notebooks/01_pcf_sweep.ipynb` | Launch a polynomial continued fraction sweep and visualise hits. | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iteba15/mzv-simplicial-net/blob/main/notebooks/01_pcf_sweep.ipynb) |
+| `notebooks/02_pslq_search.ipynb` | Load a hit from the registry and run integer relation detection. | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iteba15/mzv-simplicial-net/blob/main/notebooks/02_pslq_search.ipynb) |
+| `notebooks/03_results_report.ipynb` | Summarise the hit registry and generate the LaTeX preprint. | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iteba15/mzv-simplicial-net/blob/main/notebooks/03_results_report.ipynb) |
+
+---
+
 ## Requirements
 
 - Python 3.11
@@ -62,6 +77,19 @@ notebooks/
 ```
 pip install torch mpmath torch-geometric
 ```
+
+---
+
+## Running the search
+
+Install the package in editable mode from the repository root, then launch the PCF sweep:
+
+```
+pip install -e .
+python run_sweep.py
+```
+
+For the notebook workflow, install the development extras (`pip install -e ".[dev]"`) and run the notebooks under `notebooks/` in order: `01_pcf_sweep`, `02_pslq_search`, `03_results_report`.
 
 ---
 
@@ -81,6 +109,21 @@ No identity has been found yet.
 | NOISE | Large coefficients, numerical accident. |
 | CANDIDATE | Small coefficients, 50 or more digits. Investigate. |
 | IDENTITY | Small coefficients, 200 or more digits. Discovery. |
+
+---
+
+## Related project
+
+Companion repository: [neural-mathematical-discovery](https://github.com/iteba15/neural-mathematical-discovery).
+
+---
+
+## Author
+
+**Allan Kiplagat Iteba** (GitHub [@iteba15](https://github.com/iteba15)), BSc Astrophysics & Space Science, University of Nairobi.
+
+- LinkedIn: *(link to be added)*
+- ResearchGate: *(link to be added)*
 
 ---
 
